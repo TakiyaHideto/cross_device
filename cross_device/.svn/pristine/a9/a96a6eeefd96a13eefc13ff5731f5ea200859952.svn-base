@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+ONE_DAY_AGO=`date +%Y-%m-%d --date="-1 day"`
+TWO_DAY_AGO=`date +%Y-%m-%d --date="-2 day"`
+THIRTY_OND_DAY_AGO=`date +%Y-%m-%d --date="-31 day"`
+
+jar_dir=/home/wangyunjie/svn/cross_device/trunk/target
+jar_name=hadoop_test-1.0-jar-with-dependencies.jar
+
+class_name=com.mr.collect_data.AccumulateIp
+
+output_path=/mroutput/cross_device/AccumulateIp/log_date=$ONE_DAY_AGO
+bid_log=/user/ads/mid/user/day/userExtract
+accu_log=/mroutput/cross_device/AccumulateIp/log_date=$TWO_DAY_AGO
+
+hadoop fs -rmr -skipTrash $output_path
+hadoop jar $jar_dir/$jar_name $class_name $output_path $bid_log $accu_log $ONE_DAY_AGO $THIRTY_OND_DAY_AGO

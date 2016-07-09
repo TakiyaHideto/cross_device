@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+sh /home/ads/AT_CM_data/trunk/src/main/java/com/yoyi/multiplatform/crossplatform/script/AccumulateIp.sh
+sh /home/ads/AT_CM_data/trunk/src/main/java/com/yoyi/multiplatform/crossplatform/script/AccumulateWebType.sh
+sh /home/ads/AT_CM_data/trunk/src/main/java/com/yoyi/multiplatform/crossplatform/script/AccumulateDomain.sh
+sh /home/ads/AT_CM_data/trunk/src/main/java/com/yoyi/multiplatform/crossplatform/script/AccumulateCrowdTag.sh
+sh /home/ads/AT_CM_data/trunk/src/main/java/com/yoyi/multiplatform/crossplatform/script/AccumulateAreaCode.sh
+sh /home/ads/AT_CM_data/trunk/src/main/java/com/yoyi/multiplatform/crossplatform/script/AccumulateAppType.sh
